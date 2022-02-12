@@ -5,6 +5,8 @@ import {RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { MenuLayoutComponent } from './menu-layout/menu-layout.component';
 import { RepositoriesLayoutComponent } from './repositories-layout/repositories-layout.component';
+import { TopUserByCountryComponent } from './top-user-by-country/top-user-by-country.component';
+import { TopRepositoriesComponent } from './top-repositories/top-repositories.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -18,14 +20,24 @@ const routes: Routes = [
     path: 'repositories',
     component: RepositoriesLayoutComponent,
   },
- 
+ {
+    path: 'top-user-by-country',
+    component: TopUserByCountryComponent,
+  },
+  {
+    path: 'top-repositories',
+    component: TopRepositoriesComponent,
+  },
+  
   ]
 
 @NgModule({
   declarations: [
     LoginLayoutComponent,
     MenuLayoutComponent,
-    RepositoriesLayoutComponent
+    RepositoriesLayoutComponent,
+    TopUserByCountryComponent,
+    TopRepositoriesComponent
   ],
   imports: [
     CommonModule,
